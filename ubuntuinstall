@@ -2,4 +2,10 @@ window has different with ubuntu's time so we need package to change this
 ntpdate can help us to solve it
 and before we install the ntpdate we should update our isntaller(apt)
 we need to type sudo apt-get update.
- 
+ 好了,我可以使用中文了!
+ 暂时没啥值得记录的
+ 对了之前使用了snap install gh下载了gh,利用这个输入自己的token可以进入github了,但是这个token的时间是30d,到时候不能忘记更新.
+ gh auth login
+ 还有可以利用git clone git@github 啥啥啥的把自己之前的东西传过来,但是位置很...
+ git pull --rebase origin master 很好用,但不到是干啥的
+
