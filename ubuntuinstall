@@ -1,0 +1,5 @@
+window has different with ubuntu's time so we need package to change this
+ntpdate can help us to solve it
+and before we install the ntpdate we should update our isntaller(apt)
+we need to type sudo apt-get update.
+ 
