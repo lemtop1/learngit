@@ -1,4 +1,7 @@
 分支管理
 我们可以使用git checkout -b dev来创建并切换至dev分支
 b是创建并切换的意思 d就是删除的意思
+当然之前也是用的checkout回档
+为了不引起歧义,我们还是用switch更好一些
+第2行的命令可以换成git switch -c dev
 
