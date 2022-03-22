@@ -1,11 +1,15 @@
 /* 1-1 .cpp*/
-#include<iostream.h>
+#include<iostream>
+#include<string.h>
 using namespace std;
 
-void main()
+int main()
 {
-    int stu_number;
-    cout << "please input student number:";
-    cin << stu_number;
-    cout << "Hello!" << stu_number <<endl;
+    int num[8];
+    memset(num,1,32);
+    for (int i = 0;i<8;i++)
+    {
+        cout << num[i] << " ";
+    }
+    return 0;
 }
