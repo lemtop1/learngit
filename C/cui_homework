@@ -1,0 +1,18 @@
+#include<stdin.h>
+#include<math.h>
+#define PI = 3.1415926
+
+void ricker(float *ric,int ntw,float fpeak,float dt);
+
+int main()
+{   File *fp;
+    float dt,fpeak,ric[20000];
+    int nt,it;
+    
+    
+    fp = fopen{"part.dat","r"};
+    if(fp == NULL){
+        printf("open file %s error","part.dat");
+        return -1;
+    }
+    }
