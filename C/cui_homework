@@ -1,18 +1,51 @@
-#include<stdin.h>
+#include<stdio.h>
 #include<math.h>
-#define PI = 3.1415926
+#define PI 3.1415926
 
 void ricker(float *ric,int ntw,float fpeak,float dt);
 
 int main()
-{   File *fp;
+{   FILE *fp;
     float dt,fpeak,ric[20000];
     int nt,it;
     
     
-    fp = fopen{"part.dat","r"};
+    fp = fopen("/home/lem/learngit/C/part.dat","r");
     if(fp == NULL){
         printf("open file %s error","part.dat");
         return -1;
     }
+
+    fscanf(fp,"nt=%d\n",&nt);
+    fscanf(fp,"dt=%f\n",&dt);
+    fscanf(fp,"fpeak=%f\n",&fpeak);
+
+    fclose(fp);
+
+    ricker(ric,nt,fpeak,dt);
+
+    fp = fopen("/home/lem/learngit/C/ric.dat","w");
+    
+    if(fp == NULL){
+        printf("open file %s error!","ric.dat");
+        return -2;
+        }
+
+    for (it = 0;it < nt;it++)
+        fprintf(fp,"%f\n",ric[it]);
+    
+    fclose(fp);
+
+    return 0;
+    }
+    
+    void ricker(float ric[],int nt,float fpeak,float dt){
+        int it;
+        float x,xx,t;
+        for (it =0;it<nt;it++){
+            t = it*dt-1./fpeak;
+            x = PI*fpeak*t;
+            xx = x*x;
+            ric[it] = (1.-2.*xx)*exp(-xx);
+        }
     }
