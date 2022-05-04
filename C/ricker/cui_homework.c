@@ -10,9 +10,9 @@ int main()
     int nt,it;
     
     
-    fp = fopen("/home/lem/learngit/C/part.dat","r");
+    fp = fopen("/home/lem/learngit/C/par1.dat","r");
     if(fp == NULL){
-        printf("open file %s error","part.dat");
+        printf("open file %s error","par1.dat");
         return -1;
     }
 
