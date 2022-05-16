@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "cui_homework": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
